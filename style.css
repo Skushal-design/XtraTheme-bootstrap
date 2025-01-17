@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+ .banner{
+    background-image: url("./media/BG_1.mp4");
+    position: relative;
+    overflow: hidden;
+}
+
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: typing 4s steps(14, end) infinite alternate, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
+
+
+
+
+
+
+
+
+ #navbarNav{
+    background-color: #1f1f1f; 
+    position: fixed;
+    top: -100px; 
+    width: 100%;
+    font-size: x-large; 
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  } 
+
+
+  .dot {
+   
+    height: 7px;
+    width: 7px;
+    background-color: #97ec9e;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+ /* About Section */
+
+ .about-section {
+    position: relative;
+    padding: 50px 0;
+    
+}
+
+.about-card {
+    height: 500px;
+    width: 650px;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 3;
+    
+}
+
+.highlight-text {
+    background-color: #b2d235; /* Green highlight */
+    color: #ffffff;
+    padding: 0 4px;
+}
+
+.about-image {
+    background-color: #000000;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: -2;
+}
+
+/* Dotted background decoration */
+.dotted-background::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    right: 250px;
+    width: 700px;
+    height: 700px;
+    background-image: radial-gradient(#b2d235 1px, transparent 1px);
+    background-size: 10px 10px;
+    z-index: -1;
+}
+
+h2 {
+    font-weight: bold;
+    color: #000000;
+}
+
+.who-we-are {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+ 
+
+/* Gallery */
+
+
+.grid-wrap {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.grid-wrap ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 200px; /* Default row height */
+    gap: 25px;
+}
+
+.grid-wrap li {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Random size for images */
+.grid-wrap li:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-wrap li:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-wrap li:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-wrap li:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-wrap li:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1 ;
+}
+
+
+
+.grid-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Overlay styles */
+.grid-wrap .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background :  linear-gradient(to top, rgba(21, 87, 8, 0.8), rgba(191, 192, 142, 0.4));
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.grid-wrap .text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Hover Effects */
+.grid-wrap li:hover img {
+    transform: scale(1.1);
+}
+
+.grid-wrap li:hover .overlay {
+    opacity: 0;
+}
+
+
+/* Pricing */
+
+h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+
+/* Container */
+
+
+.price-container {
+    max-width: 1200px;
+    margin: 10px auto;
+   padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    overflow: hidden;
+  }
+
+  /* Pricing Card */
+  .pricing-card {
+    background-color: #111;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    height: 550px;
+    width: 300px; /* Fixed width for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  
+
+  .pricing-card h3 {
+    color: #a3d65c;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .pricing-card h2 {
+    color: #fff;
+    font-size: 62px;
+    margin-bottom: 30px;
+  }
+
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    flex-grow: 1;
+  }
+
+  .pricing-card ul li {
+    margin: 10px 0;
+    color: #aaa;
+  }
+
+  .btn-custom {
+      overflow: hidden;
+    color: #a3d65c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+    
+  }
+
+   .btn-custom1 {
+      overflow: hidden;
+    color: #a3d65c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+    opacity: 0;
+  }
+
+  .btn-custom:hover {
+  transition: 0.6s;
+    /* transform: translate(100px); */
+    opacity: 0;
+  }
+
+  .btn-custom:hover .btn-custom1 {
+   
+      transition: 1s;
+    transform: translate(100px);
+    opacity: 1;
+  }
+
+ 
+
+  /* End of Pricing */
+
+
+
+  /* Special Offer Section */
+
+  .offer{
+    background-color: #a3d65c;
+    min-height: 50vh;
+    margin-top: -50px;
+   
+  }
+
+  .special-offer {
+    padding: 10% 0 0 0;
+  
+    font-size: 16px;
+    text-align: center;
+    color: #444;
+  }
+
+  .special-offer strong {
+    color: #111;
+  }
+
+  /* End Of Offer Section */
+
+
+  /* Start Our Stats Section */
+
+.stats-section {
+    margin: auto;
+    margin-top: -125px;
+    width: 60vw;
+            background-color: #111;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .stats-section h2 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: lighter;
+            margin-bottom: 50px;
+        }
+        .stats-card {
+            margin-top: 30px;
+        }
+        .stats-card .icon {
+            font-size: 28px;
+            color: #a6ce39;
+        }
+        .stats-card h4 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #a6ce39;
+        }
+        .stats-card p {
+            font-size: 14px;
+        }
+
+  /* End of Start Our Stats Section */
+
+ /* Testimonials Section */
+/* Slideshow container */
+.slideshow-container {
+  height: 40vh;
+  width: 80vw;
+  margin: auto ;
+  position: relative;
+  /* background: #f1f1f1f1; */
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dots-container {
+  text-align: center;
+  padding: 20px;
+ 
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  /* background-color: #717171; */
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+ /* End of Testimonials Section */
+
+
+
+/* --------Partners Section ---------- */
+
+
+
+.partners {
+  position: relative;
+  padding: 50px 0;
+  background-color: #161616;
+  /* background-color: #d89393; */
+
+  
+}
+
+.partners-card {
+  
+  height: 600px;
+  width: 70vw;
+  color: #ffffff;
+  padding: 40px;
+  margin-left: 35%;
+  border-radius: 8px;
+  z-index: 3;
+  
+}
+
+.partners .logobox{
+  position: relative;
+  background-color: #0077b5;
+  height: 80%;
+  width: 100%;
+  
+}
+
+.logobox .partnerslogos{
+  position: absolute;
+  right: 15%;
+  bottom: 60%;
+  height: 300px;
+  width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+ 
+  /* background-color: #0077b5; */
+}
+
+
+
+
+
+/* -------- End of Partners Section ---------- */
+
+
+
+
+
+
+
+
+/* Footer section */
+
+
+
+
+.Socialicons i {
+  font-size: 2rem; 
+  
+  color: #ffffff; 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.Socialicons:hover .facebook-icon:hover {
+  color: #1877f2; 
+  transform: scale(1.1); 
+}
+
+
+.instagram-icon:hover {
+  color: #e4405f; 
+  transform: scale(1.1); 
+}
+
+
+.linkedin-icon:hover {
+  color: #0077b5; 
+  transform: scale(1.1); 
+}
+
+
+.twitter-icon:hover {
+  color: #1da1f2; 
+  transform: scale(1.1); 
+}
+
+/* End of Footer section */
